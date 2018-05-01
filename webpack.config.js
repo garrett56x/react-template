@@ -7,10 +7,12 @@ module.exports = {
   entry: './client/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   devServer: {
-    hot: true
+    hot: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
